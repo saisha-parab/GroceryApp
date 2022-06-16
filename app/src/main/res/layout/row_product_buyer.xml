@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="1dp"
+    android:elevation="3dp"
+    app:contentPadding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/productIconIV"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_cart_primary" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_toStartOf="@id/nextIV"
+            android:layout_toLeftOf="@id/nextIV"
+            android:layout_toEndOf="@id/productIconIV"
+            android:layout_toRightOf="@id/productIconIV">
+
+            <TextView
+                android:id="@+id/discountPercentTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/shap_rect05"
+                android:padding="5dp"
+                android:text="10% Off"
+                android:textColor="@color/colorGreen"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/titleTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="5dp"
+                android:layout_toLeftOf="@id/discountPercentTV"
+                android:text="Title"
+                android:textColor="@color/colorBlack"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/descriptionTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titleTV"
+                android:maxLines="2"
+                android:minLines="2"
+                android:text="Product Description"
+                android:textColor="@color/colorGray02" />
+
+            <TextView
+                android:id="@+id/addToCartTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descriptionTV"
+                android:layout_marginTop="5dp"
+                android:drawableStart="@drawable/ic_cart_primary"
+                android:drawableLeft="@drawable/ic_cart_primary"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:text="Add to Cart"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/addToCartTV"
+                android:layout_marginTop="5dp">
+
+                <TextView
+                    android:id="@+id/discountPriceTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="₹ 10"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/orignalPriceTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/discountPriceTV"
+                    android:layout_toRightOf="@id/discountPriceTV"
+                    android:text="₹ 20"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                     />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/nextIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
